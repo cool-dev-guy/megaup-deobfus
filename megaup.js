@@ -122,7 +122,7 @@ function h(a) {
   });
 }
 function E() {
-  return "0WNT100W64641390G20100101F1390"; //UA slice.
+  return UASlice; //UA slice.
 }
 function v(a) {
   return String.fromCharCode.apply(null, a);
@@ -291,7 +291,7 @@ function u3() {
         break;
       case arr1[47][3][58]:
         var r = [arguments];
-        r[6] = h("fâÎ²Üôü\tÑu]|*3d®îZ²PE"); //const:B3.I2c(143)
+        r[6] = h(atob(keys.key1)); //const:B3.I2c(143)
         a = arr1[22][28][59];
         break;
       case arr2[41][8][25]:
@@ -431,7 +431,7 @@ function n3(a) {
 }
 // 1-P2
 function G3() {
-  return "5Á@B\0û¥tRkõmzr%òø<K¸êrWEU"; // const:B3.W3x(346)
+  return atob(keys.key2); // const:B3.W3x(346)
 }
 function x(a) {
   return h(c(G3(), v(a)));
@@ -453,7 +453,7 @@ function b3() {
         break;
       case arr1[16][44][16]:
         var e = [arguments];
-        e[1] = h("PÞ¬-|÷Å|å\"üV¤wMNxåiãi\"5Ã¶CÙ"); // const:B3.I2c(505)
+        e[1] = h(atob(keys.key3)); // const:B3.I2c(505)
         a = arr1[10][16][35];
         break;
       case arr1[3][55][54]:
@@ -477,7 +477,7 @@ function b3() {
                 r = arr2[58][16][6][0];
                 break;
               case arr1[63][57][54]:
-                e[3] = [`1619=${cookie}`, cookie];
+                e[3] = [`${cookieVar}=${cookie}`, cookie];
                 r = arr2[32][63][46];
                 break;
               case arr1[34][17][63]:
@@ -637,7 +637,7 @@ function Z(a) {
 
 // Z fn -reset fn
 function T() {
-  return "!!îìj8 Ê%ÈK\"Ç'@Ñl\re*0qrÝÍ:"; // const:B3.I2c(224)
+  return atob(keys.key4); // const:B3.I2c(224)
 }
 function t3(a) {
   return h(c(T(), v(a)));
@@ -721,7 +721,7 @@ function w() {
         break;
       case arr1[25][62][64]:
         var r = [arguments];
-        r[2] = h("z<Q8Û7b¤RU@Éè«ÆZi}R? ÌÍ"); // const:B3.W3x(194)
+        r[2] = h(atob(keys.key5)); // const:B3.W3x(194)
         a = arr1[55][56][35];
         break;
     }
@@ -849,7 +849,7 @@ function a3(a) {
   return u(a);
 }
 function _() {
-  return "Ýücð~u¹:Ðäâ&a\böÆ=ÞÉÎi\0YmB1"; // const:B3.I2c(96)
+  return atob(keys.key6); // const:B3.I2c(96)
 }
 
 // 4-P1 
@@ -866,7 +866,7 @@ function h3() {
         break;
       case arr1[5][22][16]:
         var e = [arguments];
-        e[8] = h("®ºà)Ò¹9ÞsÏìSvÿJ¿RgÐÀ/ÚíÐÿDóº £"); // const:B3.W3x(179)
+        e[8] = h(atob(keys.key7)); // const:B3.W3x(179)
         a = arr1[42][4][11];
         break;
       case arr2[15][58][29]:
@@ -1048,7 +1048,7 @@ function s3(a) {
 }
 // 4-P2
 function K() {
-  return "æ/âjS3ê^ðêêp·B=Å÷1ð1Tù*O(àÂø"; // B3.W3x(425)
+  return atob(keys.key8); // B3.W3x(425)
 }
 function o3(a) {
   return h(c(K(), v(a)));
@@ -1077,7 +1077,7 @@ function k3() {
         break;
       case arr2[30][65][16]:
         var e = [arguments];
-        e[5] = h("»Í&vîVðÿ[ÇñëVak3fÇ»¿¼¹"); // const:B3.I2c(375)
+        e[5] = h(atob(keys.key9)); // const:B3.I2c(375)
         a = arr2[57][6][5];
         break;
       case arr1[60][53][20]:
@@ -1259,7 +1259,7 @@ function Q(a) {
 }
 // 5-P2
 function P() {
-  return "ÔC%=ùÚâ\ns´¹o*åK;»c[;mÆbÜë"; // B3.W3x(67)
+  return atob(keys.key10); // B3.W3x(67)
 }
 function i3(a) {
   return h(c(P(), v(a)));
@@ -1285,6 +1285,8 @@ function decrypt(a) {
   return JSON.parse(decodeURIComponent(result));
 }
 
-
-const cookie = "...";
-decrypt("...")
+const keys = {} // get keys fro ./mega-keys.js
+const UASlice = "..." // window.navigator.userAgent.replace(/[^\101-\u0048\x49-\u0052\x53-\u0055\x56-\x5a\u0030-\u0032\x33-\x36\u0037-\071]/g, "").slice(-30);
+const cookieVar = "..."; // the variable on which the cookie is stored.(like 1111=rc829) => 1111 is cookieVar and rc829 is cookie.
+const cookie = "..."; // the cookie.
+decrypt("...") // encrypted text
