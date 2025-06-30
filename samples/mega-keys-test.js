@@ -122,7 +122,7 @@ function h(a) {
   });
 }
 function E() {
-  return "0WNT100W64641390G20100101F1390"; //UA slice.
+  return UASlice; //UA slice.
 }
 function v(a) {
   return String.fromCharCode.apply(null, a);
@@ -477,7 +477,7 @@ function b3() {
                 r = arr2[58][16][6][0];
                 break;
               case arr1[63][57][54]:
-                e[3] = [`1619=${cookie}`, cookie];
+                e[3] = [`${cookieVar}=${cookie}`, cookie];
                 r = arr2[32][63][46];
                 break;
               case arr1[34][17][63]:
@@ -1285,6 +1285,8 @@ function decrypt(a) {
   return JSON.parse(decodeURIComponent(result));
 }
 
-
-const cookie = "..."; // cookie.
+const keys = {} // get keys fro ./mega-keys.js
+const UASlice = "..." // window.navigator.userAgent.replace(/[^\101-\u0048\x49-\u0052\x53-\u0055\x56-\x5a\u0030-\u0032\x33-\x36\u0037-\071]/g, "").slice(-30);
+const cookieVar = "..."; // the variable on which the cookie is stored.(like 1111=rc829) => 1111 is cookieVar and rc829 is cookie.
+const cookie = "..."; // the cookie.
 decrypt("...") // encrypted text
