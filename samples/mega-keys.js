@@ -3,14 +3,15 @@
 // Produces a `keys.json` including all the keys.
 // Add the URL param first to test the code.(any specific site url works)
 
+const URL = ""; // [IMPORTANT] : use any megaup player url.
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 let dom;
 (async function () {
-  const response = await fetch("https://megaup.cc/e/18uvZzjyWS2JcOLxGbJM5hHpCQ?autostart=true");
+  const response = await fetch(URL);
   const html = await response.text();
   dom = new JSDOM(html, {
-    url: "https://megaup.cc/e/18uvZzjyWS2JcOLxGbJM5hHpCQ?autostart=true"
+    url: URL
   });
   console.log(dom.window.document.title);
   const window = dom.window;
